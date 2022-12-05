@@ -1,4 +1,4 @@
-# WebdriverIO Assignment
+# Cypress Assignment
 
 ## :dart: About
 
