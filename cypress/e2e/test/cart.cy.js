@@ -39,11 +39,12 @@ describe("Cart", () => {
     cy.get(Cart.removedCartItem).should("exist");
   });
 
-  it.only("Remove one item from product list page", () => {
+  it("Remove one item from product list page", () => {
     const product = products[0];
     Cart.addToCart(product);
-
+    cy.get(Cart.cartNotification).should("exist");
     Cart.removeFromCart(product);
+    cy.get(Cart.cartNotification).should("not.exist");
   });
 
   it("Add multiple products to cart", () => {
